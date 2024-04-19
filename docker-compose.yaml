@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  node-app:
+    image: chunyiwang/workshop:v1
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3040"]  
+      interval: 30s  
+      timeout: 10s   
+      retries: 3     
+      start_period: 60s  
+    networks:
+      app:
+        ipv4_address: 172.31.0.2
+
+networks:
+  app:
+    ipam:
+      config:
+        - subnet: 172.31.0.0/24
+
+
