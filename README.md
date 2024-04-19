@@ -34,8 +34,11 @@ Subnet is configured for the container
 The service implements some basic calculation methods, including addition, subtraction, multiplication, division, open roots, exponentiation, and modulo operations
 ### Addition, subtraction, multiplication, division
 curl 'http://172.31.0.2:3040/add?n1=2&n2=3'
+
 curl 'http://172.31.0.2:3040/minus?n1=3&n2=3'
+
 curl 'http://172.31.0.2:3040/multiply?n1=2&n2=3'
+
 curl 'http://172.31.0.2:3040/divide?n1=4&n2=2'
 
 ### Square Root
